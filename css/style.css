@@ -31,3 +31,8 @@
     text-align: right;
     color: white;
 }
+
+button{
+    padding: .5rem 1rem;
+    margin: .5rem;
+}
