@@ -34,15 +34,24 @@ createApp({
                 }
             ],
 
-            activeIndex : 0,
-            activeImg : 'img/01.webp',
-            activeTitle : 'Marvel\'s Spiderman Miles Morale',
-            activeText : 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.'
+            activeIndex : 0
         }
     },
     methods: {
-        nextImg: function(){
+        prevImg: function(){
+            if (this.activeIndex > 0) {
+                this.activeIndex--;
+            } else {
+                this.activeIndex = this.slides.length - 1;
+            }
+        },
 
+        nextImg: function() {
+            if (this.activeIndex < this.slides.length - 1) {
+                this.activeIndex++;
+            } else {
+                this.activeIndex = 0;
+            }
         }
     }
 }).mount('#app');
